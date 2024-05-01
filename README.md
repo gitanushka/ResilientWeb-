@@ -31,17 +31,17 @@ Access to AWS Management Console
 ## Architecture Overview
 The ResilientWeb+ architecture leverages various AWS services to ensure high availability and fault tolerance. Here's a brief overview:
 
-**Amazon EC2**: Provides scalable compute resources for hosting web servers.
-**Amazon RDS**: Offers managed relational database services for storing application data.
-**Elastic Load Balancing (ELB)**: Distributes incoming traffic across multiple EC2 instances for high availability.
-**Amazon S3**: Secure and scalable object storage for hosting static assets.
-**Amazon CloudFront**: Content delivery network for faster delivery of web content.
+**Amazon EC2**: Provides scalable compute resources for hosting web servers. <br>
+**Amazon RDS**: Offers managed relational database services for storing application data. <br>
+**Elastic Load Balancing (ELB)**: Distributes incoming traffic across multiple EC2 instances for high availability. <br>
+**Amazon S3**: Secure and scalable object storage for hosting static assets. <br>
+**Amazon CloudFront**: Content delivery network for faster delivery of web content. <br>
 **Virtual Private Cloud (VPC)**: Creates isolated network environments for enhanced security.
 
 ## Deployment
 To deploy the ResilientWeb+ project, follow these steps:
 
-**Set up AWS Account**: Create an AWS account if you don't have one already.
+**Set up AWS Account**: Create an AWS account if you don't have one already. 
 **Configure AWS Services**: Set up EC2 instances, RDS databases, ELB, S3 buckets, CloudFront distributions, and VPC according to the architecture diagram.
 **Deploy Application**: Clone this repository and deploy the application code to your EC2 instances.
 **Configure Security**: Ensure proper security configurations for EC2 instances, RDS databases, and other AWS resources.
