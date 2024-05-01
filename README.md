@@ -38,15 +38,52 @@ The ResilientWeb+ architecture leverages various AWS services to ensure high ava
 **Amazon CloudFront**: Content delivery network for faster delivery of web content. <br>
 **Virtual Private Cloud (VPC)**: Creates isolated network environments for enhanced security.
 
+## Connection and Installation commands:
+After connection successes in ec2, run the following command to install Apache and MySQL on
+your instance: <br>
+sudo yum install -y <br>
+httpd sudo yum install -y mysql <br>
+
+// Set the environment variable of MySQL in your computer, replace to the endpoint which can be
+found in RDS <br>
+export MYSQL_HOST = <your_endpoint> <br>
+• mysql –user = <your_userame> --password = <your_password> wordpress <br>
+• Create a new DB for WordPress and grant the permission <br>
+• CREATE USER wordpress@localhost IDENTIFIED BY 'wordpress-pass; <br>
+• GRANT ALL PRIVILEGES ON wordpress." TO wordpress; <br>
+• FLUSH PRIVILEGES; <br>
+• Exit <br>
+Then, download the WordPress module and unzip it
+• wget https://wordpress.org/latest.tar.gz <br>
+o tar -xzf latest.tar.gz <br>
+Move into WordPress folder and backup the default config file <br>
+cd wordpress <br>
+cp wp-config-sample.php wp-config.php <br>
+After that use nano to edit the wp-config.php file <br>
+
+## Modify the following script into the correct value: <br>
+• DB_NAME: 'wordpress' DB_USER: 'wordpress' DB_PASSWORD 'wordpress-pass' <br>
+DB_HOST: your RDS endpoint <br>
+//* MySQL settings - You can get this info from your web host * // <br>
+/** The name of the database for WordPress */ <br>
+define('DB_NAME', 'database_name_here'); <br>
+
+/ MySQL database username "/ <br>
+define('DB_USER', 'username_here"); <br>
+/** MySQL database password */ <br>
+define('DB_PASSWORD', 'password_here"); <br>
+• /** MySQL hostname */ define('DB_HOST', 'localhost' ); <br>
+define( "W3TC_CONFIG_DATABASE, true); <br>
+
 ## Deployment
 To deploy the ResilientWeb+ project, follow these steps:
 
-**Set up AWS Account**: Create an AWS account if you don't have one already. 
-**Configure AWS Services**: Set up EC2 instances, RDS databases, ELB, S3 buckets, CloudFront distributions, and VPC according to the architecture diagram.
-**Deploy Application**: Clone this repository and deploy the application code to your EC2 instances.
-**Configure Security**: Ensure proper security configurations for EC2 instances, RDS databases, and other AWS resources.
-**Test Application**: Test the deployed application to ensure it's functioning correctly.
-**Monitor Performance**: Monitor application performance using AWS CloudWatch and other monitoring tools.
+**Set up AWS Account**: Create an AWS account if you don't have one already. <br>
+**Configure AWS Services**: Set up EC2 instances, RDS databases, ELB, S3 buckets, CloudFront distributions, and VPC according to the architecture diagram. <br>
+**Deploy Application**: Clone this repository and deploy the application code to your EC2 instances. <br>
+**Configure Security**: Ensure proper security configurations for EC2 instances, RDS databases, and other AWS resources. <br>
+**Test Application**: Test the deployed application to ensure it's functioning correctly. <br>
+**Monitor Performance**: Monitor application performance using AWS CloudWatch and other monitoring tools. 
 
 ## Usage
 Once the application is deployed, users can access the ResilientWeb+ e-commerce platform through the provided URL. They can browse products, make purchases, and perform other typical e-commerce activities.
