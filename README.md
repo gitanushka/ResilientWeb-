@@ -22,11 +22,11 @@ Optimizing costs while maintaining a high-quality service is a constant concern 
 
 ## Prerequisites
 
-Before getting started, you'll need the following:
+Before getting started, you'll need the following: <br>
 
-An AWS account
-Basic knowledge of AWS services
-Access to AWS Management Console
+An AWS account <br> 
+Basic knowledge of AWS services<br>
+Access to AWS Management Console <br>
 
 ## Architecture Overview
 The ResilientWeb+ architecture leverages various AWS services to ensure high availability and fault tolerance. Here's a brief overview:
